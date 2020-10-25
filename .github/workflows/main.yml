@@ -21,6 +21,10 @@ jobs:
           java-version: 1.8
       - name: Build debug APK
         run: bash ./gradlew assembleDebug --stacktrace
+      - name: Install tree
+        run: apt-get update && apt-get install -yq tree
+      - name: run tree
+        run: tree 
       - name: Upload APK
         uses: actions/upload-artifact@v1
         with:
