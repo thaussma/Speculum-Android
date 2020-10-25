@@ -22,7 +22,7 @@ jobs:
       - name: Build debug APK
         run: bash ./gradlew assembleDebug --stacktrace
       - name: Install tree
-        run: apt-get update && apt-get install -yq tree
+        run: sudo apt-get update && sudo apt-get install -yq tree
       - name: run tree
         run: tree 
       - name: Upload APK
